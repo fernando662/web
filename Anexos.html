@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Anexos Visuales</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .anexo-item {
+            border: 3px solid #00ccff;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .anexo-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 20px rgba(0, 204, 255, 0.4);
+        }
+        .anexo-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .pie-foto {
+            padding: 1rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        .secciones-laterales {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .seccion-btn {
+            background: rgba(0, 204, 255, 0.1);
+            border: 2px solid #00ccff;
+            color: white;
+            padding: 0.8rem 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .seccion-btn:hover {
+            background: rgba(0, 204, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="burbujas">
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+    </div>
+
+    <header>
+        <h1>Anexos Visuales</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="fuentescalificadas.html">Fuentes</a>
+            <a href="testimonios.html">Testimonios</a>
+            <a href="cierre.html">Conclusión</a>
+        </nav>
+    </header>
+    <main>
+        <div class="galeria">
+            <div class="anexo-item">
+                <img src="Prof.PedroValencia.jpg" alt="Prof. Pedro Valencia">
+                <div class="pie-foto">"Pedro Valencia, especialista en la tecnología, analiza su impacto en la educación."</div>
+            </div>
+            <div class="anexo-item">
+                <img src="Prof.RolandoTorres.jpg" alt="Prof. Rolando Torres">
+                <div class="pie-foto">"Rolando Torres, docente en el área de informática, opina sobre el impacto tecnológico."</div>
+            </div>
+            <div class="anexo-item">
+                <img src="JorgeDavila.jpg" alt="Jorge Davila">
+                <div class="pie-foto">"Jorge Dávila, exestudiante del tercero B técnico, relata su experiencia con el uso de tecnologías durante su formación académica."</div>
+            </div>
+            <div class="anexo-item">
+                <img src="SantiagoTela.jpg" alt="Santiago Tela">
+                <div class="pie-foto">"Santiago Tela, estudiante de tercero A técnico, comenta cómo la tecnología ha influido en su proceso educativo."</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

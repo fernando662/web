@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reportaje Educativo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .portada {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 70vh;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .titulo-principal {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            margin-bottom: 2rem;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(0, 204, 255, 0.7);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        .titulo-principal::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #00ccff, transparent);
+        }
+        .argumento {
+            max-width: 800px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #d4e9ff;
+            margin-bottom: 3rem;
+        }
+        .menu-principal {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .menu-item {
+            color: #cceeff;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #00ccff;
+            border-radius: 30px;
+        }
+        .menu-item:hover {
+            background: rgba(0, 204, 255, 0.2);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="burbujas">
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+    </div>
+
+    <div class="portada">
+        <h1 class="titulo-principal">El impacto del uso de tecnologías en el proceso educativo de la Unidad Educativa Juan Henríquez Coello.</h1>
+        <p class="argumento">
+           La implementación estratégica de herramientas tecnológicas en la Unidad Educativa "Juan Henríquez Coello" ha redefinido los paradigmas de enseñanza-aprendizaje, creando un ecosistema digital donde docentes y estudiantes construyen conocimiento. Este reportaje documenta cómo la integración de plataformas digitales, equipamiento tecnológico de vanguardia y recursos virtuales está revolucionando la formación técnica
+        </p>
+        <div class="menu-principal">
+            <a href="fuentescalificadas.html" class="menu-item">Fuentes Calificadas</a>
+            <a href="testimonios.html" class="menu-item">Testimonios</a>
+            <a href="anexos.html" class="menu-item">Anexos</a>
+            <a href="cierre.html" class="menu-item">Conclusión</a>
+        </div>
+    </div>
+</body>
+</html>

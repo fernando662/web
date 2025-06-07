@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Testimonios Estudiantiles</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .contenedor-testimonios {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+        }
+        .testimonio {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #00ccff;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            max-width: 600px;
+            width: 45%;
+            min-width: 400px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .testimonio:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 204, 255, 0.2);
+        }
+        .curso-titulo {
+            color: #00ccff;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #00ccff;
+            padding-bottom: 0.5rem;
+        }
+        .pregunta {
+            margin: 1.5rem 0;
+        }
+        .pregunta strong {
+            color: #aeeeff;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .secciones-laterales {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .seccion-btn {
+            background: rgba(0, 204, 255, 0.1);
+            border: 2px solid #00ccff;
+            color: white;
+            padding: 0.8rem 1.2rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .seccion-btn:hover {
+            background: rgba(0, 204, 255, 0.3);
+        }
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-contenido {
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid #00ccff;
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        .cerrar-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .modal-titulo {
+            color: #00ccff;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .volver-btn {
+            background: #00ccff;
+            color: #0a0f3c;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            display: block;
+            margin: 2rem auto 0;
+            transition: all 0.3s;
+        }
+        .volver-btn:hover {
+            background: #00aadd;
+        }
+        @media (max-width: 1000px) {
+            .testimonio {
+                width: 90%;
+                min-width: unset;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="burbujas">
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+    </div>
+
+    <header>
+        <h1>Testimonios Estudiantiles</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="fuentescalificadas.html">Fuentes</a>
+            <a href="anexos.html">Anexos</a>
+            <a href="cierre.html">Conclusión</a>
+        </nav>
+    </header>
+
+    <main class="contenedor-testimonios">
+        <div class="testimonio" id="tecnico-b" onclick="abrirModal(
+            'Tercero B TÉCNICO', 
+            
+            [
+                
+                
+            ]
+        )">
+            <h2 class="curso-titulo">Ex Estudiante del Tercer ”B”  Técnico:  JORGE DAVILA</h2>
+            <p>"Jorge Dávila, exestudiante del tercero B técnico, relata su experiencia con el uso de tecnologías durante su formación académica."</p>
+            <div class="pregunta">
+                <p>Según Jorge Dávila, estudiante de Pedagogía de las Ciencias Experimentales con mención en Pedagogía de la Informática en la Universidad Técnica de Machala y exalumno destacado de la Unidad Educativa "Juan Henríquez Coello" (con nota de grado de 9.75), las herramientas tecnológicas han revolucionado su perspectiva sobre el proceso educativo. "Estos recursos no son solo complementos, sino elementos transformadores que, cuando se usan con criterio pedagógico, redefinen completamente la experiencia de aprendizaje", sostiene con convicción.</p>
+                <p>El joven estudiante universitario, cuya trayectoria académica sobresaliente lo posiciona como un caso ejemplar, detalla su experiencia con las plataformas digitales: "Desde mis años en el colegio hasta mi actual formación universitaria, herramientas como Moodle para organizar el aprendizaje, Genially para crear materiales interactivos y asistentes de IA como Gemini han marcado mi desarrollo. Lo más valioso es cómo me han enseñado a pensar de forma más crítica y creativa".</p>
+               
+            </div>
+            <p style="color: #aeeeff; text-align: center; margin-top: 1rem;">[Haz clic para ver completo]</p>
+        </div>
+
+        <div class="testimonio" id="tecnico-A" onclick="abrirModal(
+            'Tercero A TÉCNICO', 
+           
+            [
+
+            ]
+        )">
+            <h2 class="curso-titulo">Estudiante del Tercer ”A”  Técnico: Santiago Tela</h2>
+            <p>Santiago Tela, estudiante de tercero A técnico, comenta cómo la tecnología ha influido en su proceso educativo."</p>
+            <div class="pregunta">
+                <p>Según Santiago Tela, estudiante de la Unidad Educativa "Juan Henríquez Coello", la tecnología ha transformado radicalmente su experiencia educativa. "Estas herramientas digitales han cambiado completamente mi forma de aprender. Cuando usamos simuladores para prácticas técnicas o plataformas colaborativas, los conceptos abstractos se vuelven concretos y aplicables", explica con entusiasmo.</p>
+                <p>El joven estudiante, quien cursa actualmente su último año de formación técnica, detalla su rutina académica: "En mi día a día, plataformas como Moodle son esenciales para organizar mis trabajos, mientras que programas como Tinkercad me permiten diseñar circuitos electrónicos en 3D para mis proyectos. La clave está en usarlas como complemento al estudio, no como reemplazo".</p>
+                <p>El impacto en su preparación profesional es particularmente notable: "Ahora que estoy por iniciar mis prácticas profesionales, valoro mucho haber desarrollado habilidades con estas herramientas. Los empleadores buscan precisamente estas competencias técnicas digitales que hemos cultivado en el aula", comenta Tela.</p>
+            </div>
+            <p style="color: #aeeeff; text-align: center; margin-top: 1rem;">[Haz clic para ver completo]</p>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+        <div class="modal-contenido">
+            <h2 class="modal-titulo" id="modal-titulo"></h2>
+            <p id="modal-descripcion" style="text-align: center; font-style: italic; margin-bottom: 1.5rem;"></p>
+            <div id="modal-preguntas"></div>
+            <button class="volver-btn" onclick="cerrarModal()">Volver</button>
+        </div>
+    </div>
+
+    <script>
+        function scrollToTestimonio(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function abrirModal(titulo, descripcion, preguntas) {
+            document.getElementById('modal-titulo').textContent = titulo;
+            document.getElementById('modal-descripcion').textContent = descripcion;
+            
+            const contenedorPreguntas = document.getElementById('modal-preguntas');
+            contenedorPreguntas.innerHTML = '<h3 style="color:#00ccff; margin:1.5rem 0 1rem;">Preguntas y Respuestas</h3>';
+            
+            preguntas.forEach(item => {
+                const preguntaDiv = document.createElement('div');
+                preguntaDiv.className = 'pregunta';
+                preguntaDiv.innerHTML = `
+                    <strong>${item.pregunta}</strong>
+                    <p>${item.respuesta}</p>
+                `;
+                contenedorPreguntas.appendChild(preguntaDiv);
+            });
+            
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function cerrarModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
